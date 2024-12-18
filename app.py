@@ -1,4 +1,5 @@
 import sys
+from main import *
 from PyQt5.QtCore import QSize, Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
 
@@ -10,7 +11,7 @@ class MainWindow(QMainWindow):
 
         self.setFixedSize(QSize(int(1920/1.8), int(1080/1.5)))
 
-        button = QPushButton()
+        button = QPushButton(str(sphericity(int(4),int(3))))
         self.setCentralWidget(button)
 
 app = QApplication(sys.argv)
